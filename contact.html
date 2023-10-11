@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Gallery by Kunal</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Waifu Photo Studio HTML Template">
+	<meta name="keywords" content="photo, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+	
+
+	<style>
+		body {
+		  background-color: #111;
+		}
+	  </style>
+
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header Section -->
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-4 col-md-3 order-2 order-sm-1">
+					<div class="header__social">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+					</div>
+				</div>
+				<div class="col-sm-4 col-md-6 order-1  order-md-2 text-center">
+					<a href="./index.html" class="site-logo">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="col-sm-4 col-md-3 order-3 order-sm-3">
+					<div class="header__switches">
+						<!-- <a href="#" class="search-switch"><i class="fa fa-search"></i></a> -->
+						<a href="#" class="nav-switch"><i class="fa fa-bars"></i></a>
+						<!-- <a href="#"><i class="fa fa-shopping-cart"></i></a> -->
+					</div>
+				</div>
+			</div>
+
+			<style>
+				.main__menu .nav__menu li a {
+					 color: white;
+				   }
+				 </style>
+
+			<nav class="main__menu">
+				<ul class="nav__menu">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./about.html">About</a></li>
+					<li><a href="./gallery.html">Gallery</a></li>
+					<li><a href="./reviews.html">Reviews</a></li>
+				
+						
+					</li>
+					<li><a href="./contact.html" class="menu--active">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Header Section end -->
+
+	<!-- Contact Page -->
+	<section class="contact__page">
+		<div class="contact__warp">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Contact Me</h2>
+
+					<div class="contact__social">
+						<a href=""><i class="fa fa-whatsapp"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="https://www.instagram.com/kunaltiwary18/"><i class="fa fa-instagram"></i></a>
+						<a href="https://github.com/kunaltiwary18"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
+
+				
+
+				<div class="col-md-6">
+					<div class="contact__text">
+						<p>Phone: +918521020208</p>
+						<p>Email: tiwarykunal15@gmail.com</p>
+						<p>Address: Tata City | India</p>
+					</div>
+				</div>
+			</div>
+
+
+			 <form class="contact__form" onsubmit="sendEmail(); return false;">
+				<input type="text" placeholder="Name" id="name">
+				<input type="text" placeholder="Email" id="email">
+				<input type="text" placeholder="Phone" id="phone">
+				<textarea placeholder="Message" id="message"></textarea>
+				<button class="site-btn" type="submit">Send Message</button>
+			</form>
+			
+			<script>
+				function sendEmail() {
+					const name = document.getElementById('name').value;
+					const email = document.getElementById('email').value;
+					const phone = document.getElementById('phone').value;
+					const message = document.getElementById('message').value;
+					
+					const subject = 'Contact Form Submission from ' + name;
+					const emailBody = 'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\n\nMessage:\n' + message;
+					
+					window.location.href = 'mailto:tiwarykunal15@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(emailBody);
+				}
+			</script>
+			
+
+		</div>
+	</section>
+	<!-- Contact Page end -->
+
+	<!-- Footer Section -->
+	<footer class="footer__section">
+		<div class="container">
+			<!-- Copyright Site -->
+			<div class="footer__copyright__text">
+				<p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/kunaltiwary18" target="_blank">Github - Kunal Tiwary</a></p>
+			</div>
+			
+		</div>
+	</footer>
+	<!-- Footer Section end -->
+
+	<!-- Search Begin -->
+	<div class="search-model">
+		<div class="h-100 d-flex align-items-center justify-content-center">
+			<div class="search-close-switch">+</div>
+			<form class="search-model-form">
+				<input type="text" id="search-input" placeholder="Search here.....">
+			</form>
+		</div>
+	</div>
+	<!-- Search End -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
